@@ -1,0 +1,23 @@
+@use '../z-index';
+
+.Toastify__toast-container {
+  @extend .z-toast;
+}
+
+.Toastify__toast {
+  --at-apply: shadow-md;
+
+  background-color: var(--nova-elements-bg-depth-2);
+  color: var(--nova-elements-textPrimary);
+  border: 1px solid var(--nova-elements-borderColor);
+}
+
+.Toastify__close-button {
+  color: var(--nova-elements-item-contentDefault);
+  opacity: 1;
+  transition: none;
+
+  &:hover {
+    color: var(--nova-elements-item-contentActive);
+  }
+}

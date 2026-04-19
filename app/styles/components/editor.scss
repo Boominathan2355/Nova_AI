@@ -1,0 +1,135 @@
+:root {
+  --cm-backgroundColor: var(--nova-elements-editor-backgroundColor, var(--nova-elements-bg-depth-1));
+  --cm-textColor: var(--nova-elements-editor-textColor, var(--nova-elements-textPrimary));
+
+  /* Gutter */
+
+  --cm-gutter-backgroundColor: var(--nova-elements-editor-gutter-backgroundColor, var(--cm-backgroundColor));
+  --cm-gutter-textColor: var(--nova-elements-editor-gutter-textColor, var(--nova-elements-textSecondary));
+  --cm-gutter-activeLineTextColor: var(--nova-elements-editor-gutter-activeLineTextColor, var(--cm-gutter-textColor));
+
+  /* Fold Gutter */
+
+  --cm-foldGutter-textColor: var(--nova-elements-editor-foldGutter-textColor, var(--cm-gutter-textColor));
+  --cm-foldGutter-textColorHover: var(--nova-elements-editor-foldGutter-textColorHover, var(--cm-gutter-textColor));
+
+  /* Active Line */
+
+  --cm-activeLineBackgroundColor: var(--nova-elements-editor-activeLineBackgroundColor, rgb(224 231 235 / 30%));
+
+  /* Cursor */
+
+  --cm-cursor-width: 2px;
+  --cm-cursor-backgroundColor: var(--nova-elements-editor-cursorColor, var(--nova-elements-textSecondary));
+
+  /* Matching Brackets */
+
+  --cm-matching-bracket: var(--nova-elements-editor-matchingBracketBackgroundColor, rgb(50 140 130 / 0.3));
+
+  /* Selection */
+
+  --cm-selection-backgroundColorFocused: var(--nova-elements-editor-selection-backgroundColor, #42b4ff);
+  --cm-selection-backgroundOpacityFocused: var(--nova-elements-editor-selection-backgroundOpacity, 0.3);
+  --cm-selection-backgroundColorBlured: var(--nova-elements-editor-selection-inactiveBackgroundColor, #c9e9ff);
+  --cm-selection-backgroundOpacityBlured: var(--nova-elements-editor-selection-inactiveBackgroundOpacity, 0.3);
+
+  /* Panels */
+
+  --cm-panels-borderColor: var(--nova-elements-editor-panels-borderColor, var(--nova-elements-borderColor));
+
+  /* Search */
+
+  --cm-search-backgroundColor: var(--nova-elements-editor-search-backgroundColor, var(--cm-backgroundColor));
+  --cm-search-textColor: var(--nova-elements-editor-search-textColor, var(--nova-elements-textSecondary));
+  --cm-search-closeButton-backgroundColor: var(--nova-elements-editor-search-closeButton-backgroundColor, transparent);
+
+  --cm-search-closeButton-backgroundColorHover: var(
+    --nova-elements-editor-search-closeButton-backgroundColorHover,
+    var(--nova-elements-item-backgroundActive)
+  );
+
+  --cm-search-closeButton-textColor: var(
+    --nova-elements-editor-search-closeButton-textColor,
+    var(--nova-elements-item-contentDefault)
+  );
+
+  --cm-search-closeButton-textColorHover: var(
+    --nova-elements-editor-search-closeButton-textColorHover,
+    var(--nova-elements-item-contentActive)
+  );
+
+  --cm-search-button-backgroundColor: var(
+    --nova-elements-editor-search-button-backgroundColor,
+    var(--nova-elements-item-backgroundDefault)
+  );
+
+  --cm-search-button-backgroundColorHover: var(
+    --nova-elements-editor-search-button-backgroundColorHover,
+    var(--nova-elements-item-backgroundActive)
+  );
+
+  --cm-search-button-textColor: var(--nova-elements-editor-search-button-textColor, var(--nova-elements-textSecondary));
+
+  --cm-search-button-textColorHover: var(
+    --nova-elements-editor-search-button-textColorHover,
+    var(--nova-elements-textPrimary)
+  );
+
+  --cm-search-button-borderColor: var(--nova-elements-editor-search-button-borderColor, transparent);
+  --cm-search-button-borderColorHover: var(--nova-elements-editor-search-button-borderColorHover, transparent);
+
+  --cm-search-button-borderColorFocused: var(
+    --nova-elements-editor-search-button-borderColorFocused,
+    var(--nova-elements-borderColorActive)
+  );
+
+  --cm-search-input-backgroundColor: var(--nova-elements-editor-search-input-backgroundColor, transparent);
+  --cm-search-input-textColor: var(--nova-elements-editor-search-input-textColor, var(--nova-elements-textPrimary));
+  --cm-search-input-borderColor: var(--nova-elements-editor-search-input-borderColor, var(--nova-elements-borderColor));
+
+  --cm-search-input-borderColorFocused: var(
+    --nova-elements-editor-search-input-borderColorFocused,
+    var(--nova-elements-borderColorActive)
+  );
+
+  /* Tooltip */
+
+  --cm-tooltip-backgroundColor: var(--nova-elements-editor-tooltip-backgroundColor, var(--cm-backgroundColor));
+  --cm-tooltip-textColor: var(--nova-elements-editor-tooltip-textColor, var(--nova-elements-textPrimary));
+
+  --cm-tooltip-backgroundColorSelected: var(
+    --nova-elements-editor-tooltip-backgroundColorSelected,
+    theme('colors.alpha.accent.30')
+  );
+
+  --cm-tooltip-textColorSelected: var(
+    --nova-elements-editor-tooltip-textColorSelected,
+    var(--nova-elements-textPrimary)
+  );
+
+  --cm-tooltip-borderColor: var(--nova-elements-editor-tooltip-borderColor, var(--nova-elements-borderColor));
+
+  --cm-searchMatch-backgroundColor: var(--nova-elements-editor-searchMatch-backgroundColor, rgba(234, 92, 0, 0.33));
+}
+
+html[data-theme='light'] {
+  --nova-elements-editor-gutter-textColor: #237893;
+  --nova-elements-editor-gutter-activeLineTextColor: var(--nova-elements-textPrimary);
+  --nova-elements-editor-foldGutter-textColorHover: var(--nova-elements-textPrimary);
+  --nova-elements-editor-activeLineBackgroundColor: rgb(50 53 63 / 5%);
+  --nova-elements-editor-tooltip-backgroundColorSelected: theme('colors.alpha.accent.20');
+  --nova-elements-editor-search-button-backgroundColor: theme('colors.gray.100');
+  --nova-elements-editor-search-button-backgroundColorHover: theme('colors.alpha.gray.10');
+}
+
+html[data-theme='dark'] {
+  --cm-backgroundColor: var(--nova-elements-bg-depth-2);
+  --nova-elements-editor-gutter-textColor: var(--nova-elements-textTertiary);
+  --nova-elements-editor-gutter-activeLineTextColor: var(--nova-elements-textSecondary);
+  --nova-elements-editor-selection-inactiveBackgroundOpacity: 0.3;
+  --nova-elements-editor-activeLineBackgroundColor: rgb(50 53 63 / 50%);
+  --nova-elements-editor-foldGutter-textColorHover: var(--nova-elements-textPrimary);
+  --nova-elements-editor-matchingBracketBackgroundColor: rgba(66, 180, 255, 0.3);
+  --nova-elements-editor-search-button-backgroundColor: theme('colors.gray.800');
+  --nova-elements-editor-search-button-backgroundColorHover: theme('colors.alpha.white.10');
+}
